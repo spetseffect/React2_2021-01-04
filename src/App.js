@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { Books } from './components/Books';
-import { books } from './data/books';
+import { booksList } from './data/books';
 
 function App() {
 	return (
 		<div className="App">
-			<Books data={books} />
+			<Books data={booksList} />
 		</div>
 	);
 }

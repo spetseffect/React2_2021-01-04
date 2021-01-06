@@ -1,10 +1,10 @@
 import React from 'react';
 
-export class Books extends React.Component {
+export class Music extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			books: this.props.data
+			musList: this.props.data
 		};
 	}
 
