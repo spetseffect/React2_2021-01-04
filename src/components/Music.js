@@ -9,23 +9,36 @@ export class Music extends React.Component {
 	}
 
 	render() {
-		let bookList = this.state.books.map((item, index) => {
+		let musList = this.state.musList.map((item, index) => {
 			return (
 				<li key={index} >
-					<h2>"{item.name}" {item.avtor} ({item.pages}c./{item.genre})</h2>
-					{item.review.map((r, i) => {
+					<h3>"{item.name}"</h3>
+					<h4>Состав группы</h4>
+					<ul>
+						{item.collective.map((c, i) => {
 						return (
-							<div key={i}>
-								<h3>{r.avtor}</h3>
-								<p>{r.text}</p>
-							</div>
+							<li key={i}>
+								{c.name} - {c.role}
+							</li>
 						);
 					})}
+					</ul>
+					<h4>Альбомы</h4>
+					<ul>
+						{item.albums.map((a, i) => {
+						return (
+							<li key={i}>
+								"{a.name}" - {a.year}
+							</li>
+						);
+					})}
+					</ul>
 				</li>
 			);
 		});
 		return (<>
-			<ul>{bookList}</ul>
+			<h2>Музыка</h2>
+			<ul>{musList}</ul>
 			<hr />
 		</>);
 	}
